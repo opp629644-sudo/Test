@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunrise School Management</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="logo">🏫</span>
+          <div>
+            <h1>Sunrise School Management</h1>
+            <p>Secure, role-based access for students, teachers, and administrators.</p>
+          </div>
+        </div>
+        <nav class="top-actions">
+          <button id="logoutBtn" class="ghost hidden">Logout</button>
+        </nav>
+      </header>
+
+      <main class="main-grid">
+        <section class="panel login-panel" id="loginPanel">
+          <h2>Login</h2>
+          <p class="muted">Use the demo accounts to explore each role.</p>
+          <form id="loginForm" class="form-stack">
+            <label>
+              Username
+              <input type="text" name="username" placeholder="student1" required />
+            </label>
+            <label>
+              Password
+              <input type="password" name="password" placeholder="Welcome@123" required />
+            </label>
+            <button type="submit" class="primary">Sign in</button>
+          </form>
+          <div class="demo-accounts">
+            <h3>Demo Accounts</h3>
+            <ul>
+              <li><strong>student1</strong> / Welcome@123</li>
+              <li><strong>teacher1</strong> / Welcome@123</li>
+              <li><strong>principal</strong> / Welcome@123</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="dashboardPanel">
+          <div class="panel-header">
+            <div>
+              <h2 id="welcomeTitle">Welcome</h2>
+              <p class="muted" id="roleSubtitle">Role-based dashboard</p>
+            </div>
+            <div class="role-pill" id="rolePill">Role</div>
+          </div>
+
+          <div class="cards" id="quickStats"></div>
+
+          <div class="section-grid">
+            <div class="section-card" id="profileSection">
+              <h3>Profile</h3>
+              <div class="section-content" id="profileContent"></div>
+            </div>
+            <div class="section-card" id="attendanceSection">
+              <h3>Attendance</h3>
+              <div class="section-content" id="attendanceContent"></div>
+            </div>
+            <div class="section-card" id="notesSection">
+              <h3>Notes & Study Material</h3>
+              <div class="section-content" id="notesContent"></div>
+            </div>
+            <div class="section-card" id="timetableSection">
+              <h3>Timetables</h3>
+              <div class="section-content" id="timetableContent"></div>
+            </div>
+            <div class="section-card" id="transportSection">
+              <h3>Transport</h3>
+              <div class="section-content" id="transportContent"></div>
+            </div>
+            <div class="section-card" id="behaviorSection">
+              <h3>Behavior Notes</h3>
+              <div class="section-content" id="behaviorContent"></div>
+            </div>
+            <div class="section-card" id="noticesSection">
+              <h3>Notices & Circulars</h3>
+              <div class="section-content" id="noticesContent"></div>
+            </div>
+            <div class="section-card" id="websiteSection">
+              <h3>Official Website Sections</h3>
+              <div class="section-content" id="websiteContent"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
